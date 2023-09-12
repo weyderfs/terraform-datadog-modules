@@ -34,6 +34,6 @@ variable "include_tags" {
   description = "(Boolean) A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title. Defaults to true"
 }
 variable "tags" {
-  type        = map(list)
+  type        = set
   description = "(Set of String) A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors page of the UI. Note: it's not currently possible to filter by these tags when querying via the API"
 }
