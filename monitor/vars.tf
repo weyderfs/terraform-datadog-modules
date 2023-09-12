@@ -25,7 +25,6 @@ variable "query" {
 
 variable "monitor_thresholds" {
   type        = list(string)
-  default     = []
   description = "(Block List, Max: 1) Alert thresholds of the monitor" 
 }
 
