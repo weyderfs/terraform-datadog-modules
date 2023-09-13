@@ -20,7 +20,7 @@ variable "query" {
 
 variable "monitor_thresholds_critical" {
   type        = string
-  description = "(String) The monitor CRITICAL threshold. Must be a number." 
+  description = "(String) The monitor CRITICAL threshold. Must be a number."
 }
 
 variable "priority" {
@@ -35,9 +35,9 @@ variable "priority" {
 }
 
 variable "require_full_window" {
-  type          = bool
-  default       = false
-  description   = "(Boolean) A boolean indicating whether this monitor needs a full window of data before it's evaluated."
+  type        = bool
+  default     = false
+  description = "(Boolean) A boolean indicating whether this monitor needs a full window of data before it's evaluated."
 }
 
 variable "restricted_roles" {
@@ -46,8 +46,8 @@ variable "restricted_roles" {
 }
 
 variable "notify_audit" {
-  type    = bool
-  default = true
+  type        = bool
+  default     = true
   description = "(Boolean) A boolean indicating whether tagged users will be notified on changes to this monitor."
 }
 
