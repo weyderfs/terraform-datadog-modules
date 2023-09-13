@@ -2,7 +2,7 @@ resource "datadog_monitor" "dm" {
   name               = var.name
   type               = var.type
   message            = var.message
-  escalation_message = var.escalation_message
+  // escalation_message = var.escalation_message
 
   query = var.query
 

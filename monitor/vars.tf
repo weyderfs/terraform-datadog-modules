@@ -13,10 +13,10 @@ variable "message" {
   description = "(String) A message to include with notifications for this monitor."
 }
 
-variable "escalation_message" {
-  type        = string
-  description = "(String) A message to include with a re-notification. Supports the @username notification allowed elsewhere."
-}
+// variable "escalation_message" {
+//   type        = string
+//   description = "(String) A message to include with a re-notification. Supports the @username notification allowed elsewhere."
+// }
 
 variable "query" {
   type        = string
