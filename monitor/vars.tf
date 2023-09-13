@@ -20,6 +20,7 @@ variable "query" {
 
 variable "monitor_thresholds" {
   type        = map
+  default     = {}
   description = "(Block List, Max: 1) Alert thresholds of the monitor" 
 }
 
@@ -30,7 +31,7 @@ variable "priority" {
 
   validation {
     condition     = var.priority >= 1 && var.priority <= 5 && floor(var.priority) == var.priority
-    error_message = "The max value is 5, where is it low"
+    error_message = "The max value is 5, where is five is most low priority"
   }
 }
 
