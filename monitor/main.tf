@@ -6,7 +6,7 @@ resource "datadog_monitor" "dm" {
 
   query = var.query
 
-  monitor_thresholds = var.monitor_thresholds
+  // monitor_thresholds = var.monitor_thresholds
 
   include_tags = var.include_tags
 

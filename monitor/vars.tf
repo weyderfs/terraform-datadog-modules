@@ -23,10 +23,10 @@ variable "query" {
   description = "(String) The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending on the monitor type, please see the API Reference for details. terraform plan will validate query contents unless validate is set to false."
 }
 
-variable "monitor_thresholds" {
-  type        = map(string)
-  description = "(Block List, Max: 1) Alert thresholds of the monitor" 
-}
+// variable "monitor_thresholds" {
+//   type        = map(string)
+//   description = "(Block List, Max: 1) Alert thresholds of the monitor" 
+// }
 
 variable "include_tags" {
   type        = bool
