@@ -19,7 +19,7 @@ variable "query" {
 }
 
 variable "monitor_thresholds" {
-  type        = map
+  type        = map(any)
   description = "(Block List, Max: 1) Alert thresholds of the monitor" 
 }
 

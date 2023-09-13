@@ -6,12 +6,8 @@ resource "datadog_monitor" "dm" {
   require_full_window = var.require_full_window
   notify_audit        = var.notify_audit
   restricted_roles    = var.restricted_roles
-
-  query = var.query
-
-  monitor_thresholds = var.monitor_thresholds
-
-  include_tags = var.include_tags
-
-  tags = var.tags
+  query               = var.query
+  monitor_thresholds  = var.monitor_thresholds
+  include_tags        = var.include_tags
+  tags                = var.tags
 }
