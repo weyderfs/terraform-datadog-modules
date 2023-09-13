@@ -28,6 +28,12 @@ variable "query" {
 //   description = "(Block List, Max: 1) Alert thresholds of the monitor" 
 // }
 
+variable "notify_audit" {
+  type    = bool
+  default = true
+  description = "(Boolean) A boolean indicating whether tagged users will be notified on changes to this monitor."
+}
+
 variable "include_tags" {
   type        = bool
   default     = true

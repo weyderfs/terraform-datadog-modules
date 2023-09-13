@@ -3,6 +3,7 @@ resource "datadog_monitor" "dm" {
   type               = var.type
   message            = var.message
   // escalation_message = var.escalation_message
+  notify_audit       = var.notify_audit
 
   query = var.query
 
