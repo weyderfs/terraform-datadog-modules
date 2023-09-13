@@ -34,7 +34,7 @@ variable "priority" {
   description = "(Number) Integer from 1 (high) to 5 (low) indicating alert severity."
 
   validation {
-    condition     = length(var.priority) <= 5
+    condition     = validate_integer(var.priority, 1, 5)
     error_message = "The max value is 5, where is it low"
   }
 }
