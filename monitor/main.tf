@@ -7,7 +7,11 @@ resource "datadog_monitor" "dm" {
   notify_audit        = var.notify_audit
   restricted_roles    = var.restricted_roles
   query               = var.query
-  monitor_thresholds  = var.monitor_thresholds
+  
+  monitor_thresholds {
+    critical = var.monitor_thresholds_critical
+  }
+  
   include_tags        = var.include_tags
   tags                = var.tags
 }

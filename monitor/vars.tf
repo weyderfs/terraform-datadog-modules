@@ -18,10 +18,9 @@ variable "query" {
   description = "(String) The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending on the monitor type, please see the API Reference for details. terraform plan will validate query contents unless validate is set to false."
 }
 
-variable "monitor_thresholds" {
-  type        = map
-  default     = {}
-  description = "(Block List, Max: 1) Alert thresholds of the monitor" 
+variable "monitor_thresholds_critical" {
+  type        = string
+  description = "(String) The monitor CRITICAL threshold. Must be a number." 
 }
 
 variable "priority" {
