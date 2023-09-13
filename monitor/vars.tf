@@ -28,6 +28,28 @@ variable "query" {
 //   description = "(Block List, Max: 1) Alert thresholds of the monitor" 
 // }
 
+variable "priority" {
+  type        = number
+  default     = 1
+  description = "(Number) Integer from 1 (high) to 5 (low) indicating alert severity."
+
+  validation {
+    condition     = lenght(var.priority) <= 5
+    error_message = "The max value is 5, where is it low"
+  }
+}
+
+variable "require_full_window" {
+  type          = bool
+  default       = false
+  description   = "(Boolean) A boolean indicating whether this monitor needs a full window of data before it's evaluated."
+}
+
+variable "restricted_roles" {
+  type        = set(string)
+  description = "(Set of String) A list of unique role identifiers to define which roles are allowed to edit the monitor. Editing a monitor includes any updates to the monitor configuration, monitor deletion, and muting of the monitor for any amount of time."
+}
+
 variable "notify_audit" {
   type    = bool
   default = true
