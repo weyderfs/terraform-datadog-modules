@@ -5,5 +5,5 @@ output "name" {
 
 output "type" {
   value       = datadog_monitor.dm.type
-  description = "The Datadog monitor name"
+  description = "The Datadog monitor type"
 }
