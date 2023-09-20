@@ -7,6 +7,7 @@ resource "datadog_monitor" "dm" {
   notify_audit        = var.notify_audit
   restricted_roles    = var.restricted_roles
   query               = var.query
+  new_group_delay     = var.new_group_delay
 
   monitor_thresholds {
     critical = var.monitor_thresholds_critical
