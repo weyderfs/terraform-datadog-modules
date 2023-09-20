@@ -19,7 +19,7 @@ variable "query" {
 }
 
 variable "new_group_delay" {
-  type        = string
+  type        = number
   description = "(Number) The time (in seconds) to skip evaluations for new groups."
 }
 
