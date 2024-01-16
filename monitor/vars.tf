@@ -21,11 +21,30 @@ variable "query" {
 variable "new_group_delay" {
   type        = number
   description = "(Number) The time (in seconds) to skip evaluations for new groups."
+  default     = null
 }
 
-variable "monitor_thresholds_critical" {
-  type        = string
-  description = "(String) The monitor CRITICAL threshold. Must be a number."
+variable "on_missing_data" {
+  type          = string
+  description   = "(String) Controls how groups or monitors are treated if an evaluation does not return any data points. The default option results in different behavior depending on the monitor query type."
+  
+}
+
+//variable "monitor_thresholds_critical" {
+//  type        = string
+//  description = "(String) The monitor CRITICAL threshold. Must be a number."
+//}
+
+//TODO=Add description for each parameter on monitor_treshold inline block  
+variable "monitor_thresholds" {
+  type        = list(any)
+  description = "(List Of String) The monitor CRITICAL and RECOVERY threshold. Must be a number."
+}
+
+variable "monitor_threshold_windows" {
+  type        = list(any)
+  default     = []
+  description = "(Block List, Max: 1) A mapping containing recovery_window and trigger_window values, e.g. last_15m . Can only be used for, and are required for, anomaly monitors"
 }
 
 variable "priority" {
@@ -65,3 +84,5 @@ variable "tags" {
   type        = set(string)
   description = "(Set of String) A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors page of the UI. Note: it's not currently possible to filter by these tags when querying via the API"
 }
+
+
